@@ -1,3 +1,8 @@
 export default function Home() {
-  return <main>This is my main</main>;
+  return (
+    <main>
+
+      <h1>Hello Upleveled</h1>
+    </main>
+  );
 }
