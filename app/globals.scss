@@ -1,0 +1,25 @@
+.generateButton {
+  padding: 0.6rem;
+}
+
+global.scss * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(68, 80, 185);
+}
+
+nav {
+  width: 100vw;
+  height: 4rem;
+  background: tan;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  > div a {
+    margin: 4px;
+  }
+}

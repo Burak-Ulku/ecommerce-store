@@ -1,5 +1,6 @@
-import './globals.css';
+import './globals.scss';
 import { Inter } from 'next/font/google';
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -12,11 +13,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <nav>
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/animals">Animals</a>
-        </nav>
+        <div>
+          <nav>
+            {/* normalde bu parantezlerde "a" kullaniyoruz. nexjs de böyle bir özellik var, yukaridaki import next/linkden , a yerine link yaziyoruz. böylelikle , sayfa load ederken daha hizli calisiyor */}
+            <Link href="/">Home</Link>
+            <Link href="/about">About</Link>
+            <Link href="/animals">Animals</Link>
+          </nav>
+        </div>
+        {Math.floor(Math.random() * 10)}
         {children}
       </body>
     </html>
