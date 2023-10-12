@@ -7,6 +7,7 @@ import style from './GenerateButton.module.scss';
 export default function GenerateButton() {
   const [color, setColor] = useState();
   const router = useRouter();
+  console.log('hello client');
   return (
     <div>
       <button
