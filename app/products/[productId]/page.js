@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getProduct } from '../../../database/products';
+import ProductCommentForm from './ProductCommentForm';
 
 export function generateMetadata({ params }) {
   const singleProduct = getProduct(Number(params.productId));
@@ -25,7 +26,8 @@ export default function ProductsPage(props) {
         width={400}
         height={300}
       />
-      this is a {singleProduct.type} that named {singleProduct.toyName}
+      This is a {singleProduct.type} that named {singleProduct.toyName}
+      <ProductCommentForm />
     </div>
   );
 }
